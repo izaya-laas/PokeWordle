@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Poke Wordle</title>
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="/app/css/styles.css">
+</head>
+
+<body>
+ <header class="header">
+  <img src="/app/assets/pokemon.png" alt="pokemon header">
+ </header>
+ <main class="main">
+  <h1>Welcome to PokeWordle</h1>
+  <form class="form-generation">
+   <label for="generation">Elige una generacion (1-8):</label>
+   <input type="text" name="generation" class="answer" pattern="^[1-8]"
+    title="El valor requerido es un numero del 1 al 8" required>
+   <input type="submit" value="Enviar">
+  </form>
+  <section class="rendered" id="rendered">
+   <div class="poke">
+    <div class="cubo">P</div>
+    <div class="cubo">O</div>
+    <div class="cubo">K</div>
+    <div class="cubo">E</div>
+   </div>
+   <div class="wordle">
+    <div class="cubo">W</div>
+    <div class="cubo">O</div>
+    <div class="cubo">R</div>
+    <div class="cubo">D</div>
+    <div class="cubo">L</div>
+    <div class="cubo">E</div>
+   </div>
+  </section>
+ </main>
+ <aside class="aside">
+  <h2>Pistas</h2>
+  <p class="type" id="type"></p>
+  <p class="move" id="move"></p>
+ </aside>
+ <script src="/app/js/index.js" type="module"></script>
+ <style id="style"></style>
+</body>
+
+</html>

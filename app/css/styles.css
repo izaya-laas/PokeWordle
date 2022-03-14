@@ -1,0 +1,85 @@
+body {
+ margin: 0 auto;
+ padding: 0;
+ box-sizing: border-box;
+ width: 80%;
+ min-height: 100vh;
+ background-color: antiquewhite;
+ font-family: 'Raleway', "sans-serif" ;
+
+ display: grid;
+ grid-template-areas: "header aside"
+                      "main aside";
+ grid-template-columns: 80% 20%;
+ grid-template-rows: 70px auto;
+ 
+}
+
+*,
+*::before,
+*::after {
+ box-sizing: inherit;
+}
+
+img {
+ width: 100%;
+ height: auto;
+}
+
+
+/* Header */
+.header {
+ height: 70px;
+ grid-area: header;
+}
+.header img{
+ height: 100%;
+ object-fit: contain;
+}
+
+
+/* MAIN */
+.main{
+ margin-top: 10px;
+ text-align: center;
+ grid-area: main;
+
+}
+h1{
+ text-align: center;
+ font-weight: 600;
+}
+
+.rendered{
+ margin-top: 10px;
+ display: grid;
+}
+.cubo{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ 
+ width: 60px;
+ height: 60px;
+ border-radius: 5px;
+ margin: 5px;
+
+ background-color: aliceblue;
+}
+
+.poke, .wordle{
+ display: flex;
+ justify-content: center;
+}
+.answer{
+ caret-color: #2a79bd;
+}
+.answer:focus{
+ outline: 0;
+}
+
+/* ASIDE */
+.aside{
+ grid-area: aside;
+ text-align: center;
+}
