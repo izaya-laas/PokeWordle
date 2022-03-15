@@ -2,15 +2,15 @@ import { rendered } from "./components/rendered.js";
 import api from "./helpers/wp_api.js"
 import { ajax } from "./helpers/ajax.js";
 import { pistas } from "./components/pistas.js";
-import randomNum from "./helpers/randomNum.js";
+import randomNum from "./helpers/random-num.js";
 import { keyboard } from "./components/keyboard.js";
-
+import { getPokemonName, setPokemonName } from "./helpers/pokemon-name.js";
 
 const d = document;
 let pokemonName;
 
 d.addEventListener("DOMContentLoaded", e =>{
-   keyboard();
+   keyboard(pokemonName);
    console.log(localStorage.getItem("play"))
 });
 
@@ -36,10 +36,11 @@ d.addEventListener("submit", e => {
             success(json) {
                let cantidadPokemones = json.pokemon_species.length - 1;
                let numeroAleatorio = randomNum(0, cantidadPokemones);
-               pokemonName = json.pokemon_species[numeroAleatorio].name;
+               setPokemonName(json.pokemon_species[numeroAleatorio].name);
+               pokemonName = getPokemonName();
 
                localStorage.setItem("play", true);
-               d.querySelector(".answer").disabled = true;
+               d.querySelector(".form-generation").style.display = "none";
 
                rendered(pokemonName);
                pistas(pokemonName);
