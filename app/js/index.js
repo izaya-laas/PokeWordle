@@ -4,14 +4,13 @@ import { ajax } from "./helpers/ajax.js";
 import { pistas } from "./components/pistas.js";
 import randomNum from "./helpers/random-num.js";
 import { keyboard } from "./components/keyboard.js";
-import { getPokemonName, setPokemonName } from "./helpers/pokemon-name.js";
+import { getPokeProperty, setPokeProperty } from "./helpers/pokemon.js";
 
 const d = document;
 let pokemonName;
 
 d.addEventListener("DOMContentLoaded", e =>{
-   keyboard(pokemonName);
-   console.log(localStorage.getItem("play"))
+   keyboard();
 });
 
 window.addEventListener("beforeunload", (e)=>{
@@ -36,8 +35,11 @@ d.addEventListener("submit", e => {
             success(json) {
                let cantidadPokemones = json.pokemon_species.length - 1;
                let numeroAleatorio = randomNum(0, cantidadPokemones);
-               setPokemonName(json.pokemon_species[numeroAleatorio].name);
-               pokemonName = getPokemonName();
+               setPokeProperty("name",json.pokemon_species[numeroAleatorio].name);
+               pokemonName = getPokeProperty("name");
+               setPokeProperty("api", `${api.POKE_RANDOM}/${pokemonName}`)
+
+               // console.log(pokemonName)
 
                localStorage.setItem("play", true);
                d.querySelector(".form-generation").style.display = "none";
