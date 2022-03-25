@@ -4,14 +4,14 @@ body {
  box-sizing: border-box;
  width: 80%;
  min-height: 100vh;
- background-color: antiquewhite;
+ background-color: white;
  font-family: 'Raleway', "sans-serif" ;
 
  display: grid;
  grid-template-areas: "header aside"
-                      "main aside";
- grid-template-columns: 80% 20%;
- grid-template-rows: 70px auto;
+                      "main .";
+ grid-template-columns: auto;
+ grid-template-rows: 100px auto;
  
 }
 
@@ -29,11 +29,20 @@ img {
 
 /* Header */
 .header {
- height: 70px;
  grid-area: header;
+ 
+ display: flex;
+ justify-content: center;
+ align-items: center;
+
+ height: 70px;
+ width: 100%;
+ padding: 1rem;
 }
 .header img{
  height: 100%;
+ width: auto;
+ margin-right: 10px;
  object-fit: contain;
 }
 
@@ -64,7 +73,7 @@ h1{
  border-radius: 5px;
  margin: 5px;
 
- background-color: aliceblue;
+ background-color: #cbe3f7;
 }
 
 .poke, .wordle{
@@ -81,5 +90,56 @@ h1{
 /* ASIDE */
 .aside{
  grid-area: aside;
+ height: auto;
  text-align: center;
+}
+
+
+/* Tablet */
+@media screen and (max-width:768px) {
+ body {
+  grid-template-areas: "header"
+   "main"
+   "aside";
+  grid-template-columns: auto;
+  grid-template-rows: 70px auto auto;
+
+ }
+
+ .cubo {
+  width: 50px;
+  height: 50px;
+ }
+
+ .aside{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 80%;
+  height: 70px;
+  margin:  0 auto;
+ }
+}
+
+
+/* Cellphone */
+@media screen and (max-width:380px) {
+
+ body {
+  width: 100%;
+ }
+
+ body {
+  grid-template-areas: "header"
+   "main"
+   "aside";
+  grid-template-columns: auto;
+  grid-template-rows: 100px auto auto;
+
+ }
+
+ .cubo {
+  width: 30px;
+  height: 30px;
+ }
 }
