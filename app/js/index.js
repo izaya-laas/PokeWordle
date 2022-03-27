@@ -5,6 +5,7 @@ import { pistas } from "./components/pistas.js";
 import randomNum from "./helpers/random-num.js";
 import { keyboard } from "./components/keyboard.js";
 import { getPokeProperty, setPokeProperty } from "./helpers/pokemon.js";
+import { virtualKeyboard } from "./components/virtual-keyboard.js";
 
 const d = document,
    $keyboard = d.getElementById("keyboard");
@@ -49,5 +50,11 @@ d.addEventListener("submit", e => {
             }
          })
       }
+   }
+})
+
+d.addEventListener("click", (e)=>{
+   if(e.target.matches(".word")){
+      virtualKeyboard(e.target.textContent);
    }
 })

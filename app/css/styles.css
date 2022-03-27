@@ -127,12 +127,24 @@ h1{
  background-color: #d5e2ed;
  font-weight: 600;
  font-size: 14px;
+
+ user-select: none;
 }
 
 .none {
  display: none;
 }
-
+@media screen and (max-width:780px) {
+ .cubo {
+  width: 45px;
+  height: 45px;
+  margin: 5px;
+ }
+ .word {
+  height: 30px;
+  padding: 10px;
+ }
+}
 /* Cellphone */
 @media screen and (max-width:380px) {
 
@@ -140,8 +152,8 @@ h1{
   width: 100%;
  }
  .word{
-  height: 25px;
-  padding: 7px;
+  height: 30px;
+  padding: 6px;
  }
  .cubo {
   width: 27px;
