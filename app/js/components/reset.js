@@ -3,6 +3,7 @@ const d = document;
 export function reset(){
 
  const $rendered = d.getElementById("rendered"),
+  $clues = d.getElementById("clues"),
   $type = d.getElementById("type"),
   $move = d.getElementById("move"),
   $style = d.getElementById("style"),
@@ -27,6 +28,7 @@ export function reset(){
   </div>
  `;
 
+ $clues.innerHTML = ""
  $type.innerHTML = "";
  $move.innerHTML = "";
 

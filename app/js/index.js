@@ -6,7 +6,8 @@ import randomNum from "./helpers/random-num.js";
 import { keyboard } from "./components/keyboard.js";
 import { getPokeProperty, setPokeProperty } from "./helpers/pokemon.js";
 
-const d = document;
+const d = document,
+   $keyboard = d.getElementById("keyboard");
 let pokemonName;
 
 d.addEventListener("DOMContentLoaded", e =>{
@@ -39,13 +40,12 @@ d.addEventListener("submit", e => {
                pokemonName = getPokeProperty("name");
                setPokeProperty("api", `${api.POKE_RANDOM}/${pokemonName}`)
 
-               // console.log(pokemonName)
-
                localStorage.setItem("play", true);
                d.querySelector(".form-generation").style.display = "none";
 
                rendered(pokemonName);
                pistas(pokemonName);
+               $keyboard.style.display = "flex";
             }
          })
       }

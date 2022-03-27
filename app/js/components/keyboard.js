@@ -1,12 +1,6 @@
-import {
- getPokeProperty
-} from "../helpers/pokemon.js"
-import {
- winning
-} from "./winning.js";
-import {
- defeat
-} from "./defeat.js";
+import { getPokeProperty } from "../helpers/pokemon.js"
+import { winning } from "./winning.js";
+import { defeat } from "./defeat.js";
 
 const d = document;
 let num = 0;
@@ -59,9 +53,9 @@ const pintaCasillas = (inputName, $containerNow) => {
  const inputNameLetters = inputName.split("");
 
  inputNameLetters.forEach((el, index) => {
-  if (el === pokemonNameLetters[index]) $containerNow.children[index].style.backgroundColor = "#6aaa64";
-  else if (pokemonNameLetters.includes(el)) $containerNow.children[index].style.backgroundColor = "#c9b458";
-  else $containerNow.children[index].style.backgroundColor = "#787c7e";
+  if (el === pokemonNameLetters[index]) $containerNow.children[index].style.backgroundColor = "#ade8a5";
+  else if (pokemonNameLetters.includes(el)) $containerNow.children[index].style.backgroundColor = "#faeba7";
+  else $containerNow.children[index].style.backgroundColor = "#a4b6bf";
  })
  num = 0;
  now++;

@@ -12,9 +12,15 @@ export function pistas(name) {
     numHabilidad = randomNum(0, json.moves.length-1),
     habilidad = json.moves[numHabilidad].move.name;
 
-    const $type = d.getElementById("type"),
+    const $aside = d.getElementById("aside"), 
+     $clueTitle = d.getElementById("clue-title"),   
+     $type = d.getElementById("type"),
      $move = d.getElementById("move");
 
+    
+    $aside.style.display = "flex";
+    
+    // $clueTitle.innerHTML = "Pistas";
     $type.innerHTML = `Type: ${tipo}`;
     $move.innerHTML = `Move: ${habilidad}`;
   }
