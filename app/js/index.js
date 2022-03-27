@@ -45,7 +45,7 @@ d.addEventListener("submit", e => {
 
                rendered(pokemonName);
                pistas(pokemonName);
-               $keyboard.style.display = "flex";
+               $keyboard.classList.remove("none");
             }
          })
       }

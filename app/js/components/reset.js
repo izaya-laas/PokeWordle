@@ -3,11 +3,11 @@ const d = document;
 export function reset(){
 
  const $rendered = d.getElementById("rendered"),
-  $clues = d.getElementById("clues"),
   $type = d.getElementById("type"),
   $move = d.getElementById("move"),
   $style = d.getElementById("style"),
-  $inputGeneration = d.querySelector(".form-generation");
+  $inputGeneration = d.querySelector(".form-generation"),
+  $keyboard = d.getElementById("keyboard");
   
  $style.innerHTML = "";
 
@@ -28,11 +28,11 @@ export function reset(){
   </div>
  `;
 
- $clues.innerHTML = ""
  $type.innerHTML = "";
  $move.innerHTML = "";
 
  $inputGeneration.style.display = "block";
+ $keyboard.classList.add("none");
 
  localStorage.setItem("play", false);
 }

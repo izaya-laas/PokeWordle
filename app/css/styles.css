@@ -108,7 +108,6 @@ h1{
  flex-direction: column;
  
  margin-top: 20px;
- display: none;
 }
 .keyboard div{
  display: flex;
@@ -130,6 +129,9 @@ h1{
  font-size: 14px;
 }
 
+.none {
+ display: none;
+}
 
 /* Cellphone */
 @media screen and (max-width:380px) {
