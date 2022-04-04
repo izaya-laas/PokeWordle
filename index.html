@@ -14,8 +14,8 @@
 
 <body>
      <header class="header">
-               <img src="/app/assets/pokebola.png" class="img" alt="pokemon header">
-               <h1>PokeWordle</h1>
+          <img src="/app/assets/pokebola.png" class="img" alt="pokemon header">
+          <h1>PokeWordle</h1>
      </header>
      <main class="main">
           <form class="form-generation">
@@ -71,17 +71,34 @@
                <div class="word">-</div>
           </div>
           <div>
-               <div class="word">Enter</div>
+               <div class="word">Enter</div> <!-- ↩ -->
                <div class="word">Z</div>
                <div class="word">X</div>
                <div class="word">C</div>
                <div class="word">V</div>
                <div class="word">B</div>
                <div class="word">N</div>
-               <div class="word">M</div>
-               <div class="word">Backspace</div>
+               <div class="word">M</div> 
+               <div class="word">Backspace</div> <!-- 🡐 -->
           </div>
      </section>
+
+     <div class="modal-container transparent">
+          <div class="modal active">
+               <div class="modal-header">
+                    <h2 class="modal-title">Has ganado!</h2>
+                    <p class="modal-cancel">x</p>
+               </div>
+               <div class="modal-body">
+                    <p class="modal-paragraph">Enhorabuena el pokemon era Ditto, felicidades!!</p>
+                    <img alt="imagen-pokemon" src="/app/assets/pokemon-prueba.png" class="modal-image">
+               </div>
+               <div class="modal-footer">
+                    <p>Compartir</p>
+               </div>
+          </div>
+     </div>
+
      <script src="/app/js/index.js" type="module"></script>
      <style id="style"></style>
 </body>

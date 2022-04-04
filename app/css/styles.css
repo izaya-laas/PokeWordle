@@ -131,6 +131,93 @@ h1{
  user-select: none;
 }
 
+/* VENTANAS MODAL*/
+.modal-container{
+  position: fixed;
+  top: 0;
+  left: 0;
+  
+  height: 100vh;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(0, 0, 0, 0.5);
+
+  opacity: 1;
+  transition: opacity 1s;
+}
+.modal{
+  position: relative;
+
+  transform: translateY(0);
+  transition: transform 1s;
+  
+  width: 360px;
+  height: 290px;
+    
+  border-radius: 1rem;
+  border: 1px solid #808080;
+  
+  /* background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); */
+  background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);
+}
+
+.transparent{
+  opacity: 0;
+  visibility: hidden;
+}
+
+.active{
+  transform: translateY(-200%);
+}
+
+.modal-cancel{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+
+  width: 25px;
+  height: 25px;
+  margin: 0;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  color: #fff;
+  background-image: linear-gradient(-225deg, #3D4E81 0%, #5753C9 48%, #6E7FF3 100%);
+}
+
+.modal-body{
+  text-align:center;
+
+  padding: 1rem;
+  background-color: #fefefe;
+}
+
+h3, .modal-paragraph{
+  margin: 0;
+}
+
+h2, .modal-paragraph, .modal-footer{
+  text-align:center;
+}
+
+.modal-image{
+ width: 96px;
+}
+
+
+
+
+
+
+
+
 .none {
  display: none;
 }
@@ -162,5 +249,8 @@ h1{
  }
  .aside{
   width: 80%;
+ }
+ .modal{
+   width: 300px;
  }
 }

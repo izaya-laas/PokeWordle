@@ -1,10 +1,8 @@
 import { reset } from "./reset.js";
 import { getPokeProperty } from "../helpers/pokemon.js";
+import { modal } from "./modal.js";
 
-export function defeat(){
- 
- //ventana modal con cruz, al cerrar la cruz te lleva al inicio.
- alert(`Perdiste, el pokemon era: ${getPokeProperty("name")}`);
- 
- reset();
+export function defeat() {
+  modal(false);
+  reset();
 }
