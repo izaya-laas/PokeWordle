@@ -162,7 +162,13 @@ h1{
   border: 1px solid #808080;
   
   /* background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); */
+}
+
+.win{
   background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);
+}
+.defeat{
+  background-image: linear-gradient(to right, #ed6ea0 0%, #ec8c69 100%);
 }
 
 .transparent{

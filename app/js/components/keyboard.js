@@ -22,8 +22,6 @@ export function keyboard() {
 //Ojo con mr-mime (agregar el -)
 
 export const agregaTecla = (key) => {
-  console.log(now);
-
   const $containers = d.querySelectorAll(".container"),
     $containerNow = $containers[now];
 
@@ -49,7 +47,6 @@ export const agregaTecla = (key) => {
 
 const pintaCasillas = (inputName, $containerNow) => {
   let pokemonName = getPokeProperty("name").toUpperCase();
-  console.log(pokemonName);
 
   const pokemonNameLetters = pokemonName.split("");
   const inputNameLetters = inputName.split("");

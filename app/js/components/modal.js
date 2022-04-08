@@ -20,13 +20,11 @@ export async function modal(win) {
     },
   });
 
-  $modalContainer.classList.remove("transparent");
-  $modal.classList.remove("active");
-
   if (win) {
     $title.textContent = "Has ganado!";
     $paragraph.textContent = `Enhorabuena el pokemon era ${pokemonName}, felicidades!!`;
-
+    $modal.classList.remove("defeat");
+    $modal.classList.add("win");
     import("https://cdn.skypack.dev/canvas-confetti").then(
       ({ default: canvasConfetti }) => {
         canvasConfetti();
@@ -37,5 +35,10 @@ export async function modal(win) {
   } else {
     $title.textContent = "Has perdido!";
     $paragraph.textContent = `El pokemon era ${pokemonName}, suerte en la proxima partida!!`;
+    $modal.classList.remove("win");
+    $modal.classList.add("defeat");
   }
+
+  $modalContainer.classList.remove("transparent");
+  $modal.classList.remove("active");
 }
