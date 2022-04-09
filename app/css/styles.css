@@ -229,13 +229,12 @@ h2, .modal-paragraph, .modal-footer{
 }
 @media screen and (max-width:780px) {
  .cubo {
-  width: 45px;
-  height: 45px;
   margin: 5px;
  }
  .word {
-  height: 30px;
-  padding: 10px;
+  height: 40px;
+  width: auto;
+  padding: 15px;
  }
 }
 /* Cellphone */
@@ -245,7 +244,8 @@ h2, .modal-paragraph, .modal-footer{
   width: 100%;
  }
  .word{
-  height: 30px;
+  height: 35px;
+  width: 30px;
   padding: 6px;
  }
  .cubo {

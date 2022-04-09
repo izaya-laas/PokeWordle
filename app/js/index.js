@@ -6,7 +6,6 @@ import randomNum from "./helpers/random-num.js";
 import { keyboard } from "./components/keyboard.js";
 import { getPokeProperty, setPokeProperty } from "./helpers/pokemon.js";
 import { virtualKeyboard } from "./components/virtual-keyboard.js";
-import { modal } from "./components/modal.js";
 
 const d = document,
   $keyboard = d.getElementById("keyboard");
@@ -56,7 +55,7 @@ d.addEventListener("submit", (e) => {
 
 d.addEventListener("click", (e) => {
   if (e.target.matches(".word")) {
-    virtualKeyboard(e.target.textContent);
+    virtualKeyboard(e.target.dataset.word);
   }
 
   if (e.target.matches(".modal-cancel")) {
@@ -64,3 +63,18 @@ d.addEventListener("click", (e) => {
     d.querySelector(".modal").classList.add("active");
   }
 });
+
+const media = window.matchMedia("(max-width:380px)");
+
+const responsible = (e) => {
+  if (e.matches) {
+    d.querySelector(".enter").textContent = "↲";
+    d.querySelector(".backspace").textContent = "←";
+  } else {
+    d.querySelector(".enter").textContent = "Enter";
+    d.querySelector(".backspace").textContent = "Backspace";
+  }
+};
+
+media.addEventListener("change", responsible);
+responsible(media);
