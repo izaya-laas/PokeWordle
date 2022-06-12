@@ -9,17 +9,17 @@ let now = 0;
 export function keyboard() {
   d.addEventListener("keydown", (e) => {
     if (localStorage.getItem("play") === "false") return 0;
+
     if (
       (e.keyCode < 65 || e.keyCode > 90) &&
       e.keyCode !== 8 &&
-      e.keyCode !== 13
+      e.keyCode !== 13 &&
+      e.keyCode !== 173
     )
       return 0;
     agregaTecla(e.key);
   });
 }
-
-//Ojo con mr-mime (agregar el -)
 
 export const agregaTecla = (key) => {
   const $containers = d.querySelectorAll(".container"),
@@ -45,7 +45,7 @@ export const agregaTecla = (key) => {
   }
 };
 
-const pintaCasillas = (inputName, $containerNow) => {
+export const pintaCasillas = (inputName, $containerNow) => {
   let pokemonName = getPokeProperty("name").toUpperCase();
 
   const pokemonNameLetters = pokemonName.split("");
