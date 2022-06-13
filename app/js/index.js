@@ -13,7 +13,6 @@ const d = document,
 let pokemonName;
 
 d.addEventListener("DOMContentLoaded", (e) => {
-  howToPlay();
   keyboard();
 });
 
