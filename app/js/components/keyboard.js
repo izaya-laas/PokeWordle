@@ -46,6 +46,7 @@ export const agregaTecla = (key) => {
 };
 
 export const pintaCasillas = (inputName, $containerNow) => {
+  console.log({ inputName, $containerNow });
   let pokemonName = getPokeProperty("name").toUpperCase();
 
   const pokemonNameLetters = pokemonName.split("");

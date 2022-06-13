@@ -6,12 +6,15 @@ import randomNum from "./helpers/random-num.js";
 import { keyboard } from "./components/keyboard.js";
 import { getPokeProperty, setPokeProperty } from "./helpers/pokemon.js";
 import { virtualKeyboard } from "./components/virtual-keyboard.js";
+import { howToPlay } from "./components/how-to-play.js";
 
 const d = document,
   $keyboard = d.getElementById("keyboard");
+
 let pokemonName;
 
 d.addEventListener("DOMContentLoaded", (e) => {
+  howToPlay();
   keyboard();
 });
 
@@ -60,7 +63,10 @@ d.addEventListener("click", (e) => {
 
   if (e.target.matches(".modal-cancel")) {
     d.querySelector(".modal-container").classList.add("transparent");
-    d.querySelector(".modal").classList.add("active");
+  }
+
+  if (e.target.matches(".play-btn")) {
+    d.querySelector(".learning-background").classList.add("transparent");
   }
 });
 

@@ -5,7 +5,7 @@
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Poke Wordle</title>
+     <title>PokeWordle</title>
      <link rel="preconnect" href="https://fonts.googleapis.com">
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
      <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" rel="stylesheet">
@@ -26,18 +26,18 @@
           </form>
           <section class="rendered" id="rendered">
                <div class="poke">
-                    <div class="cubo">P</div>
-                    <div class="cubo">O</div>
-                    <div class="cubo">K</div>
-                    <div class="cubo">E</div>
+                    <div class="cubo correct">P</div>
+                    <div class="cubo incorrect">O</div>
+                    <div class="cubo correct">K</div>
+                    <div class="cubo incorrect-position">E</div>
                </div>
                <div class="wordle">
-                    <div class="cubo">W</div>
-                    <div class="cubo">O</div>
-                    <div class="cubo">R</div>
-                    <div class="cubo">D</div>
-                    <div class="cubo">L</div>
-                    <div class="cubo">E</div>
+                    <div class="cubo incorrect-position">W</div>
+                    <div class="cubo correct">O</div>
+                    <div class="cubo correct">R</div>
+                    <div class="cubo incorrect-position">D</div>
+                    <div class="cubo incorrect">L</div>
+                    <div class="cubo correct">E</div>
                </div>
           </section>
      </main>
@@ -87,7 +87,7 @@
           <div class="modal active">
                <div class="modal-header">
                     <h2 class="modal-title"></h2>
-                    <p class="modal-cancel">x</p>
+                    <button class="modal-cancel">x</button>
                </div>
                <div class="modal-body">
                     <p class="modal-paragraph"></p>
@@ -99,6 +99,56 @@
           </div>
      </div>
 
+     <div class="learning-background">
+          <div class="learning-play">
+               <h2 class="learning-title">Cómo jugar</h2>
+               <p>Adivina la nombre del pokemon oculto en seis intentos.</p>
+               <p>Despues de cada intento el color de las letras cambiara mostrandote que tan cerca esta de adivinar el nombre el pokemon.</p>
+               <div class="learning-examples">
+                    <h3 class="examples-title">Ejemplos</h3>
+                    <div class="example" >
+                         <div data-name="caterpie">
+                              <div class="cubo correct">C</div>
+                              <div class="cubo correct">A</div>
+                              <div class="cubo correct">T</div>
+                              <div class="cubo correct">E</div>
+                              <div class="cubo correct">R</div>
+                              <div class="cubo correct">P</div>
+                              <div class="cubo correct">I</div>
+                              <div class="cubo correct">E</div>
+                         </div>
+                         <p>Todas las letras estan en la palabra y en la posición correcta.</p>
+                    </div>
+                    <div class="example">
+                         <div data-name="charmander">
+                              <div class="cubo incorrect-position">D</div>
+                              <div class="cubo correct">H</div>
+                              <div class="cubo correct">A</div>
+                              <div class="cubo correct">R</div>
+                              <div class="cubo correct">M</div>
+                              <div class="cubo correct">A</div>
+                              <div class="cubo correct">N</div>
+                              <div class="cubo incorrect-position">C</div>
+                              <div class="cubo correct">E</div>
+                              <div class="cubo correct">R</div>
+                         </div>
+                         <p>La letra D y C estan en la palabra pero en la posición incorrecta.</p>
+                    </div>
+                    <div class="example">
+                         <div data-name="gastly">
+                              <div class="cubo incorrect">P</div>
+                              <div class="cubo correct">A</div>
+                              <div class="cubo correct">S</div>
+                              <div class="cubo correct">T</div>
+                              <div class="cubo correct">L</div>
+                              <div class="cubo correct">Y</div>
+                         </div>
+                         <p>La letra P no está en el nombre del pokemon</p>
+                    </div>
+                    <button class="play-btn">JUGAR!</button>
+               </div>
+          </div>
+     </div>
      <script src="/app/js/index.js" type="module"></script>
      <style id="style"></style>
 </body>

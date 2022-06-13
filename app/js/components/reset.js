@@ -1,17 +1,16 @@
 const d = document;
 
-export function reset(){
+export function reset() {
+  const $rendered = d.getElementById("rendered"),
+    $type = d.getElementById("type"),
+    $move = d.getElementById("move"),
+    $style = d.getElementById("style"),
+    $inputGeneration = d.querySelector(".form-generation"),
+    $keyboard = d.getElementById("keyboard");
 
- const $rendered = d.getElementById("rendered"),
-  $type = d.getElementById("type"),
-  $move = d.getElementById("move"),
-  $style = d.getElementById("style"),
-  $inputGeneration = d.querySelector(".form-generation"),
-  $keyboard = d.getElementById("keyboard");
-  
- $style.innerHTML = "";
+  $style.innerHTML = "";
 
- $rendered.innerHTML = `
+  $rendered.innerHTML = `
    <div class="poke">
    <div class="cubo">P</div>
    <div class="cubo">O</div>
@@ -28,11 +27,11 @@ export function reset(){
   </div>
  `;
 
- $type.innerHTML = "";
- $move.innerHTML = "";
+  $type.innerHTML = "";
+  $move.innerHTML = "";
 
- $inputGeneration.style.display = "block";
- $keyboard.classList.add("none");
+  $inputGeneration.style.display = "block";
+  $keyboard.classList.add("none");
 
- localStorage.setItem("play", false);
+  localStorage.setItem("play", false);
 }
