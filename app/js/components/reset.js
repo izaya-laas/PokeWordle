@@ -12,19 +12,19 @@ export function reset() {
 
   $rendered.innerHTML = `
    <div class="poke">
-   <div class="cubo">P</div>
-   <div class="cubo">O</div>
-   <div class="cubo">K</div>
-   <div class="cubo">E</div>
-  </div>
-  <div class="wordle">
-   <div class="cubo">W</div>
-   <div class="cubo">O</div>
-   <div class="cubo">R</div>
-   <div class="cubo">D</div>
-   <div class="cubo">L</div>
-   <div class="cubo">E</div>
-  </div>
+     <div class="cubo correct">P</div>
+     <div class="cubo incorrect">O</div>
+     <div class="cubo correct">K</div>
+     <div class="cubo incorrect-position">E</div>
+   </div>
+   <div class="wordle">
+     <div class="cubo incorrect-position">W</div>
+     <div class="cubo correct">O</div>
+     <div class="cubo correct">R</div>
+     <div class="cubo incorrect-position">D</div>
+     <div class="cubo incorrect">L</div>
+     <div class="cubo correct">E</div>
+   </div>
  `;
 
   $type.innerHTML = "";
