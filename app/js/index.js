@@ -68,7 +68,7 @@ d.addEventListener("click", (e) => {
   }
 });
 
-const media = window.matchMedia("(max-width:380px)");
+const media = window.matchMedia("(max-width:600px)");
 
 const responsible = (e) => {
   if (e.matches) {
