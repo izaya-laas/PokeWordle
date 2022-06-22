@@ -1,4 +1,4 @@
-<h1 align="center" style="display:flex; align-items:center; justify-content:center; "><a href="https://pokewordle.netlify.app/" style="color:black;" target="_blank" rel="noopener noreferrer"><img width="50" style="margin-right:10px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/481px-Pokebola-pokeball-png-0.png"  alt="Vue logo">PokeWordle</a></h1>
+<h1 align="center" style="display:flex; align-items:center; justify-content:center; "><a href="https://pokewordle.netlify.app/" style="color:black;" target="_blank" rel="noopener noreferrer"><img width="40" style="margin-right:10px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/481px-Pokebola-pokeball-png-0.png"  alt="Vue logo">PokeWordle</a></h1>
 
 Game to discover the name of a pokemon, according to the generation with 2 clues. [Play the game!](https://pokewordle.netlify.app/)
 
