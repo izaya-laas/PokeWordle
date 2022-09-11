@@ -3,6 +3,7 @@ import { winning } from "./winning.js";
 import { defeat } from "./defeat.js";
 
 const d = document;
+export const tableGame = {};
 let num = 0;
 let now = 0;
 
@@ -46,18 +47,24 @@ export const agregaTecla = (key) => {
 };
 
 export const pintaCasillas = (inputName, $containerNow) => {
-  console.log({ inputName, $containerNow });
   let pokemonName = getPokeProperty("name").toUpperCase();
 
   const pokemonNameLetters = pokemonName.split("");
   const inputNameLetters = inputName.split("");
 
+  if (!tableGame[now]) tableGame[now] = "";
+
   inputNameLetters.forEach((el, index) => {
-    if (el === pokemonNameLetters[index])
+    if (el === pokemonNameLetters[index]) {
       $containerNow.children[index].style.backgroundColor = "#ade8a5";
-    else if (pokemonNameLetters.includes(el))
+      tableGame[now] += "🟩";
+    } else if (pokemonNameLetters.includes(el)) {
       $containerNow.children[index].style.backgroundColor = "#faeba7";
-    else $containerNow.children[index].style.backgroundColor = "#a4b6bf";
+      tableGame[now] += "🟨";
+    } else {
+      $containerNow.children[index].style.backgroundColor = "#a4b6bf";
+      tableGame[now] += "⬜";
+    }
   });
   num = 0;
   now++;
@@ -71,3 +78,5 @@ export const pintaCasillas = (inputName, $containerNow) => {
     defeat();
   }
 };
+
+//🟥🟨

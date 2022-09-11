@@ -189,6 +189,22 @@ h1 {
 
   /* background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); */
 }
+.modal-footer {
+  display: flex;
+  justify-content: center;
+  padding-top: 0.75rem;
+}
+.share-btn {
+  padding: 0.25rem;
+  background-color: #eee;
+  border-radius: 5px;
+  border: 0px;
+  background-image: #eee;
+  cursor: pointer;
+  opacity: 80%;
+  font-family: "Raleway";
+  text-decoration: none;
+}
 
 .win {
   background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);
