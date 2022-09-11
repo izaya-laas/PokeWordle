@@ -24,20 +24,24 @@
   <body>
     <header class="header">
       <img src="/app/assets/pokebola.png" class="img" alt="pokemon header" />
-      <h1>PokeWordle</h1>
+      <a class="title" href="https://pokewordle.netlify.app/">
+        <h1>PokeWordle</h1>
+      </a>
     </header>
     <main class="main">
       <form class="form-generation">
         <label for="generation">Elige una generacion (1-8):</label>
-        <input
-          type="text"
-          name="generation"
-          class="answer"
-          pattern="^[1-8]"
-          title="El valor requerido es un numero del 1 al 8"
-          required
-        />
-        <input type="submit" value="Enviar" />
+        <div>
+          <input
+            type="text"
+            name="generation"
+            class="answer"
+            pattern="^[1-8]"
+            title="El valor requerido es un numero del 1 al 8"
+            required
+          />
+          <button class="search-btn">Enviar</button>
+        </div>
       </form>
       <section class="rendered" id="rendered">
         <div class="poke">
