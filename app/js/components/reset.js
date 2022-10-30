@@ -30,7 +30,7 @@ export function reset() {
   $type.innerHTML = "";
   $move.innerHTML = "";
 
-  $inputGeneration.style.display = "block";
+  $inputGeneration.style.display = "flex";
   $keyboard.classList.add("none");
 
   localStorage.setItem("play", false);
