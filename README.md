@@ -14,6 +14,6 @@ Good luck in the game and I hope you have fun!
 
 ### **Some images**
 
-![Aprendiendo](/app/assets/game.png)
-![Juego](/app/assets/home.png)
-![Ganando](/app/assets/winning.png)
+![Aprendiendo](/app/assets/game-new.png)
+![Juego](/app/assets/home-new.png)
+![Ganando](/app/assets/winning-new.png)
