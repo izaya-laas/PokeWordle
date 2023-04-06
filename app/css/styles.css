@@ -5,7 +5,7 @@ body {
   overflow-x: hidden;
   width: 80%;
   max-height: 100vh;
-  background-color: white;
+  background-image: url("/app/assets/gplaypattern.png");
   font-family: "Raleway", "sans-serif";
 
   display: grid;
@@ -95,12 +95,23 @@ h1 {
 
 /* FORM */
 
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .form-generation {
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
+
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+
+  background-color: #a4b6bf20;
 }
 
 .search-btn,
@@ -111,8 +122,16 @@ h1 {
 }
 
 .search-btn {
-  background-color: #ccc;
   cursor: pointer;
+  padding: 0.3rem 1rem;
+  border: 0;
+
+  background-color: #585a5d40;
+  transition: background-color 500ms;
+}
+
+.search-btn:hover {
+  background-color: #585a5d70;
 }
 
 /* ASIDE */
@@ -125,6 +144,10 @@ h1 {
   height: auto;
   margin: 0 auto;
   text-align: center;
+}
+
+.aside p {
+  font-weight: normal;
 }
 
 /* KEYBOARD */
@@ -154,6 +177,7 @@ h1 {
   font-weight: 600;
   font-size: 14px;
 
+  cursor: pointer;
   user-select: none;
 }
 
@@ -189,21 +213,35 @@ h1 {
 
   /* background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); */
 }
+
+.modal-title {
+  color: white;
+}
+
 .modal-footer {
   display: flex;
   justify-content: center;
-  padding-top: 0.75rem;
+  padding-top: 0.6rem;
 }
+
+.twitter-icon {
+  width: 20px;
+}
+
 .share-btn {
-  padding: 0.25rem;
-  background-color: #eee;
-  border-radius: 5px;
+  color: #00aaec;
+  background-color: #fff;
+
+  display: flex;
+  gap: 5px;
+
+  padding: 0.4rem 1rem;
   border: 0px;
-  background-image: #eee;
-  cursor: pointer;
-  opacity: 80%;
+  border-radius: 10px;
+
   font-family: "Raleway";
   text-decoration: none;
+  cursor: pointer;
 }
 
 .win {
@@ -233,6 +271,7 @@ h1 {
   justify-content: center;
   align-items: center;
 
+  cursor: pointer;
   color: #fff;
   background-image: linear-gradient(
     -225deg,
@@ -279,7 +318,7 @@ h2,
   left: 0;
 
   text-align: center;
-  background-color: #fff;
+  background-image: url("/app/assets/gplaypattern.png");
 }
 
 .learning-title {
@@ -345,6 +384,7 @@ h2,
   .learning-background {
     width: 100%;
     height: 100vh;
+    padding-top: 10rem;
   }
   .word {
     height: 35px;

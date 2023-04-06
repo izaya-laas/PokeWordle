@@ -29,20 +29,22 @@
       </a>
     </header>
     <main class="main">
-      <form class="form-generation">
-        <label for="generation">Elige una generacion (1-8):</label>
-        <div>
-          <input
-            type="text"
-            name="generation"
-            class="answer"
-            pattern="^[1-8]"
-            title="El valor requerido es un numero del 1 al 8"
-            required
-          />
-          <button class="search-btn">Enviar</button>
-        </div>
-      </form>
+      <div class="form-container">
+        <form class="form-generation">
+          <label for="generation">Elige una generacion (1-8):</label>
+          <div>
+            <input
+              type="text"
+              name="generation"
+              class="answer"
+              pattern="^[1-8]"
+              title="El valor requerido es un numero del 1 al 8"
+              required
+            />
+            <button class="search-btn">Jugar</button>
+          </div>
+        </form>
+      </div>
       <section class="rendered" id="rendered">
         <div class="poke">
           <div class="cubo correct">P</div>
@@ -106,14 +108,22 @@
       <div class="modal active">
         <div class="modal-header">
           <h2 class="modal-title"></h2>
-          <button class="modal-cancel">x</button>
+          <button class="modal-cancel">
+            <img src="/app/assets/cross.svg" alt="cross-icon" />
+          </button>
         </div>
         <div class="modal-body">
           <p class="modal-paragraph"></p>
           <img alt="imagen-pokemon" src="" class="modal-image" />
         </div>
         <div class="modal-footer">
-          <a target="_blank" class="share-btn" href="">Compartir en Twitter</a>
+          <a target="_blank" class="share-btn" href=""
+            >Compartir en
+            <img
+              class="twitter-icon"
+              src="app/assets/twitter.svg"
+              alt="Twitter Icon"
+          /></a>
         </div>
       </div>
     </div>

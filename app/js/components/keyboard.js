@@ -37,9 +37,10 @@ export const agregaTecla = (key) => {
       inputName += $containerNow.children[i].textContent;
     }
     pintaCasillas(inputName, $containerNow);
-  } else if (key === "Enter" && num !== pokemonLength)
-    alert(`El pokemon posee ${pokemonLength} caracteres`);
-  else if (num === pokemonLength) return;
+  } else if (key === "Enter" && num !== pokemonLength) {
+    // alert(`El pokemon posee ${pokemonLength} caracteres`);
+    return;
+  } else if (num === pokemonLength) return;
   else {
     $containerNow.children[num].textContent = `${key}`.toUpperCase();
     num++;
@@ -78,5 +79,3 @@ export const pintaCasillas = (inputName, $containerNow) => {
     defeat();
   }
 };
-
-//🟥🟨

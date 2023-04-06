@@ -59,7 +59,7 @@ d.addEventListener("click", (e) => {
     virtualKeyboard(e.target.dataset.word);
   }
 
-  if (e.target.matches(".modal-cancel")) {
+  if (e.target.matches(".modal-cancel *")) {
     d.querySelector(".modal-container").classList.add("transparent");
   }
 
