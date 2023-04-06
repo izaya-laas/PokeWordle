@@ -12,8 +12,8 @@ Game to discover the name of a pokemon, according to the generation with 2 clues
 
 Good luck in the game and I hope you have fun!
 
-### Some images
+### **Some images**
 
-![Aprendiendo](/app/assets/learning.png)
-![Juego](/app/assets/game.png)
+![Aprendiendo](/app/assets/game.png)
+![Juego](/app/assets/home.png)
 ![Ganando](/app/assets/winning.png)
