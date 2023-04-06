@@ -11,3 +11,9 @@ Game to discover the name of a pokemon, according to the generation with 2 clues
 - Force myself to do something
 
 Good luck in the game and I hope you have fun!
+
+### Some images
+
+![Aprendiendo](/app/assets/learning.png)
+![Juego](/app/assets/game.png)
+![Ganando](/app/assets/winning.png)
